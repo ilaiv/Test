@@ -590,6 +590,8 @@ type
     TBXSeparatorItem24: TTBXSeparatorItem;
     TBXSeparatorItem25: TTBXSeparatorItem;
     tbxUndoRouteCalc: TTBXItem;
+    BtnFindCoordinates: TButton;
+    TBControlItem3: TTBControlItem;
 
     procedure FormActivate(Sender: TObject);
     procedure FormCreate(Sender: TObject);
@@ -838,6 +840,7 @@ type
     procedure tbxYandexWeatherClick(Sender: TObject);
     procedure actConfigUsePrevForVectorLayersExecute(Sender: TObject);
     procedure tbxUndoRouteCalcClick(Sender: TObject);
+    procedure BtnFindCoordinatesClick(Sender: TObject);
   private
     FactlstProjections: TActionList;
     FactlstLanguages: TActionList;
@@ -971,6 +974,8 @@ type
 
     FMarksDbMenu: TMarksDbMenu;
 
+    FCoordinateStrList: TStringList;
+    
     procedure InitSearchers;
     procedure InitMergepolygons;
     procedure InitLayers;
@@ -5719,6 +5724,51 @@ begin
   end else begin
     TTBXItem(Item).FontSettings.Bold := tsDefault;
   end;
+end;
+
+procedure TfrmMain.BtnFindCoordinatesClick(Sender: TObject);
+var
+  VPointLonLat: TDoublePoint;
+  VPoint: IGeometryLonLatPoint;
+  VPath: string;
+  VLonLatList: TStrings;
+  i: integer;
+begin
+  VPath := ExtractFilePath(Application.ExeName) + 'Points.txt';
+  FCoordinateStrList := TStringList.Create;
+
+  try
+    if FileExists(VPath) then FCoordinateStrList.LoadFromFile(VPath)
+    else
+    begin
+      ShowMessage('Файл Points.txt не найден');
+      Exit;
+    end;
+
+    if FCoordinateStrList.Count = 0 then
+    begin
+      ShowMessage('Данные о координатах точек отсутствуют');
+      Exit;
+    end;
+
+    for i := 0 to FCoordinateStrList.Count - 1 do
+    begin
+      VLonLatList := TStringList.Create;
+
+      ExtractStrings([','], [' '], PChar(FCoordinateStrList[i]), VLonLatList);
+
+      VPointLonLat.X := StrToFloat(StringReplace(VLonLatList[1], '.', ',', [rfReplaceAll]));
+      VPointLonLat.Y := StrToFloat(StringReplace(VLonLatList[0], '.', ',', [rfReplaceAll]));
+      VPoint := GState.VectorGeometryLonLatFactory.CreateLonLatPoint(VPointLonLat);
+
+      FMarkDBGUI.SaveMarkModal(nil, VPoint);
+      FState.State := ao_movemap;
+
+      VLonLatList.Free;
+    end;
+  finally
+    FCoordinateStrList.Free;
+  end
 end;
 
 procedure TfrmMain.FormMouseWheel(

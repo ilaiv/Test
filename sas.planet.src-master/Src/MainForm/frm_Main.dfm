@@ -96,7 +96,7 @@ object frmMain: TfrmMain
       end
     end
     object SrcToolbar: TTBXToolbar
-      Left = 269
+      Left = 224
       Top = 25
       Caption = 'Sources'
       DockPos = 224
@@ -132,7 +132,7 @@ object frmMain: TfrmMain
       end
     end
     object TBMarksToolbar: TTBXToolbar
-      Left = 445
+      Left = 380
       Top = 25
       Caption = 'Placemarks'
       DockPos = 363
@@ -143,7 +143,7 @@ object frmMain: TfrmMain
       TabOrder = 6
     end
     object GPSToolbar: TTBXToolbar
-      Left = 661
+      Left = 596
       Top = 25
       Caption = 'GPS'
       DockPos = 504
@@ -183,6 +183,18 @@ object frmMain: TfrmMain
         object TBGPSToPointCenter: TTBXItem
           Action = actConfigGpsFollowPositionAtCenter
         end
+      end
+      object TBControlItem3: TTBControlItem
+        Control = BtnFindCoordinates
+      end
+      object BtnFindCoordinates: TButton
+        Left = 107
+        Top = 2
+        Width = 94
+        Height = 25
+        Caption = 'Find coordinates'
+        TabOrder = 0
+        OnClick = BtnFindCoordinatesClick
       end
     end
     object TBExit: TTBXToolbar
@@ -832,7 +844,7 @@ object frmMain: TfrmMain
       end
     end
     object TBXToolBarSearch: TTBXToolbar
-      Left = 452
+      Left = 486
       Top = 0
       Caption = 'Search'
       DockPos = 413
@@ -895,8 +907,8 @@ object frmMain: TfrmMain
         Top = 0
         Width = 81
         Height = 21
-        Date = 40830.496065717590000000
-        Time = 40830.496065717590000000
+        Date = 40830.000000000000000000
+        Time = 0.496065717590681700
         TabOrder = 0
         OnChange = DateTimePicker1Change
       end
@@ -905,14 +917,14 @@ object frmMain: TfrmMain
         Top = 21
         Width = 81
         Height = 21
-        Date = 40830.496065717590000000
-        Time = 40830.496065717590000000
+        Date = 40830.000000000000000000
+        Time = 0.496065717590681700
         TabOrder = 1
         OnChange = DateTimePicker2Change
       end
     end
     object TBXFavoriteToolbar: TTBXToolbar
-      Left = 396
+      Left = 331
       Top = 25
       Caption = 'Sources'
       DockPos = 224
@@ -1040,7 +1052,7 @@ object frmMain: TfrmMain
         Left = 0
         Top = 0
         Width = 170
-        Height = 551
+        Height = 544
         Align = alClient
         AutoSize = True
         BevelOuter = bvNone
@@ -1055,7 +1067,7 @@ object frmMain: TfrmMain
           Left = 0
           Top = 9
           Width = 170
-          Height = 542
+          Height = 535
           HorzScrollBar.Visible = False
           VertScrollBar.Smooth = True
           VertScrollBar.Tracking = True
@@ -1195,7 +1207,7 @@ object frmMain: TfrmMain
       end
       object TBEditSelectPolylineRadius: TSpinEdit
         Left = 0
-        Top = 160
+        Top = 162
         Width = 61
         Height = 22
         MaxValue = 100000
@@ -1222,7 +1234,7 @@ object frmMain: TfrmMain
         Left = 0
         Top = 0
         Width = 170
-        Height = 551
+        Height = 544
         Align = alClient
         BorderStyle = bsNone
         ReadOnly = True

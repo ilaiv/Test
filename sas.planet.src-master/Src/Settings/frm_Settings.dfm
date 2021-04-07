@@ -27,14 +27,26 @@ object frmSettings: TfrmSettings
       BorderWidth = 3
       Caption = 'Maps'
       ImageIndex = 8
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object tsFavorite: TTabSheet
       Caption = 'Favorites'
       ImageIndex = 10
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object tsCache: TTabSheet
       Caption = 'Cache'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object flwpnlMemCache: TFlowPanel
         AlignWithMargins = True
         Left = 3
@@ -89,11 +101,10 @@ object frmSettings: TfrmSettings
           Left = 3
           Top = 3
           Width = 54
-          Height = 16
+          Height = 13
           Align = alLeft
           Caption = 'DBMS root:'
           Layout = tlCenter
-          ExplicitHeight = 13
         end
         object edtDBMSCachePath: TEdit
           Left = 200
@@ -263,6 +274,10 @@ object frmSettings: TfrmSettings
       BorderWidth = 3
       Caption = 'Internet'
       ImageIndex = 1
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pnlDownloadParams: TPanel
         Left = 0
         Top = 0
@@ -382,7 +397,6 @@ object frmSettings: TfrmSettings
               Margins.Bottom = 0
               Align = alLeft
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 1
             end
           end
@@ -534,10 +548,9 @@ object frmSettings: TfrmSettings
             Left = 3
             Top = 3
             Width = 59
-            Height = 17
+            Height = 13
             Align = alLeft
             Caption = 'User-Agent:'
-            ExplicitHeight = 13
           end
           object edtUserAgent: TEdit
             AlignWithMargins = True
@@ -608,10 +621,9 @@ object frmSettings: TfrmSettings
             Left = 3
             Top = 3
             Width = 79
-            Height = 17
+            Height = 13
             Align = alLeft
             Caption = 'Network engine:'
-            ExplicitHeight = 13
           end
           object cbbNetworkEngine: TComboBox
             Left = 85
@@ -620,7 +632,6 @@ object frmSettings: TfrmSettings
             Height = 21
             Align = alClient
             Style = csDropDownList
-            ItemHeight = 13
             TabOrder = 0
             OnChange = cbbNetworkEngineChange
           end
@@ -630,6 +641,10 @@ object frmSettings: TfrmSettings
     object tsControl: TTabSheet
       Caption = 'Control'
       ImageIndex = 2
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object GroupBox1: TGroupBox
         Left = 0
         Top = 0
@@ -662,6 +677,10 @@ object frmSettings: TfrmSettings
     object tsView: TTabSheet
       Caption = 'View'
       ImageIndex = 3
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object grdpnlUI: TGridPanel
         Left = 0
         Top = 0
@@ -729,7 +748,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               ItemIndex = 0
               TabOrder = 0
               Text = '12 km 423 m'
@@ -751,12 +769,11 @@ object frmSettings: TfrmSettings
               Left = 3
               Top = 3
               Width = 132
-              Height = 15
+              Height = 13
               Align = alLeft
               Alignment = taRightJustify
               Caption = 'Coordinates representation'
               Layout = tlCenter
-              ExplicitHeight = 13
             end
             object CB_llstrType: TComboBox
               AlignWithMargins = True
@@ -768,7 +785,6 @@ object frmSettings: TfrmSettings
               Margins.Bottom = 0
               Align = alBottom
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
             end
           end
@@ -787,12 +803,11 @@ object frmSettings: TfrmSettings
               Left = 6
               Top = 6
               Width = 47
-              Height = 23
+              Height = 13
               Align = alLeft
               Alignment = taRightJustify
               Caption = 'Language'
               Layout = tlCenter
-              ExplicitHeight = 13
             end
             object CBoxLocal: TComboBox
               AlignWithMargins = True
@@ -802,7 +817,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               OnChange = CBoxLocalChange
             end
@@ -906,20 +920,18 @@ object frmSettings: TfrmSettings
             object LabelGamma: TLabel
               Left = 3
               Top = 23
-              Width = 310
+              Width = 6
               Height = 13
               Align = alTop
               Caption = '_'
-              ExplicitWidth = 6
             end
             object LabelContrast: TLabel
               Left = 3
               Top = 61
-              Width = 310
+              Width = 6
               Height = 13
               Align = alTop
               Caption = '_'
-              ExplicitWidth = 6
             end
             object TrBarGamma: TTrackBar
               Left = 3
@@ -974,10 +986,9 @@ object frmSettings: TfrmSettings
                 Left = 0
                 Top = 0
                 Width = 105
-                Height = 20
+                Height = 13
                 Align = alLeft
                 Caption = 'Image postprocessing'
-                ExplicitHeight = 13
               end
               object btnImageProcessReset: TButton
                 Left = 289
@@ -1020,7 +1031,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               ItemIndex = 0
               TabOrder = 0
               Text = 'Auto'
@@ -1059,7 +1069,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               ItemIndex = 0
               TabOrder = 0
               Text = 'Geographic / WGS84'
@@ -1097,7 +1106,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               ItemIndex = 1
               TabOrder = 0
               Text = 'Don'#39't show for Geographic / WGS84'
@@ -1205,7 +1213,6 @@ object frmSettings: TfrmSettings
                 Width = 135
                 Height = 22
                 Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-                ItemHeight = 16
                 TabOrder = 0
               end
               object Label29: TLabel
@@ -1260,7 +1267,6 @@ object frmSettings: TfrmSettings
               Height = 22
               Align = alClient
               Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-              ItemHeight = 16
               TabOrder = 0
             end
           end
@@ -1294,7 +1300,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1330,7 +1335,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1366,7 +1370,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1402,7 +1405,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1438,7 +1440,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1474,7 +1475,6 @@ object frmSettings: TfrmSettings
               Height = 21
               Align = alClient
               Style = csDropDownList
-              ItemHeight = 13
               TabOrder = 0
               Items.Strings = (
                 '')
@@ -1495,6 +1495,10 @@ object frmSettings: TfrmSettings
     object tsGrids: TTabSheet
       Caption = 'Grids'
       ImageIndex = 8
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pnlTileBorders: TPanel
         Left = 0
         Top = 0
@@ -1541,7 +1545,6 @@ object frmSettings: TfrmSettings
             Width = 135
             Height = 22
             Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-            ItemHeight = 16
             TabOrder = 0
           end
           object Label28: TLabel
@@ -1620,7 +1623,6 @@ object frmSettings: TfrmSettings
             Width = 135
             Height = 22
             Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-            ItemHeight = 16
             TabOrder = 0
           end
           object LabelGsh3: TLabel
@@ -1699,7 +1701,6 @@ object frmSettings: TfrmSettings
             Width = 135
             Height = 22
             Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-            ItemHeight = 16
             TabOrder = 0
           end
           object LabelDeg3: TLabel
@@ -1736,10 +1737,18 @@ object frmSettings: TfrmSettings
     object tsGPS: TTabSheet
       Caption = 'GPS'
       ImageIndex = 4
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
     end
     object tsGPSMarker: TTabSheet
       Caption = 'GPS Marker'
       ImageIndex = 9
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object flwpnlGPSMarker: TFlowPanel
         Left = 0
         Top = 0
@@ -1779,7 +1788,6 @@ object frmSettings: TfrmSettings
           Width = 105
           Height = 22
           Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
-          ItemHeight = 16
           TabOrder = 1
         end
         object lblGPSMarkerRingsCount: TLabel
@@ -1821,6 +1829,10 @@ object frmSettings: TfrmSettings
     object tsWiki: TTabSheet
       Caption = 'Wikimapia'
       ImageIndex = 7
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object grdpnlWiki: TGridPanel
         Left = 0
         Top = 0
@@ -1883,7 +1895,6 @@ object frmSettings: TfrmSettings
           Height = 22
           Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
           Anchors = [akLeft, akTop, akBottom]
-          ItemHeight = 16
           TabOrder = 0
         end
         object lblWikiBgColor: TLabel
@@ -1901,7 +1912,6 @@ object frmSettings: TfrmSettings
           Height = 22
           Style = [cbStandardColors, cbExtendedColors, cbCustomColor, cbPrettyNames]
           Anchors = [akLeft, akTop, akBottom]
-          ItemHeight = 16
           TabOrder = 1
         end
       end
@@ -1909,6 +1919,10 @@ object frmSettings: TfrmSettings
     object tsPaths: TTabSheet
       Caption = 'Paths'
       ImageIndex = 10
+      ExplicitLeft = 0
+      ExplicitTop = 0
+      ExplicitWidth = 0
+      ExplicitHeight = 0
       object pnlMapsPath: TPanel
         Left = 0
         Top = 168
